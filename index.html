@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tablas de Frecuencia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        h2 {
+            margin-top: 50px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #d9e6f2;
+        }
+
+        .descripcion,
+        .datos {
+            background-color: #f2f2f2;
+            padding: 10px;
+            margin-top: 15px;
+        }
+
+        ul {
+            columns: 2;
+        }
+
+        .galeria {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .galeria img {
+            width: 950px;
+            /* Más grandes */
+            height: auto;
+            /* Mantiene proporción */
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Ejemplos de Tablas de Frecuencia</h1>
+
+    <!-- ===================== EJEMPLO 1 ===================== -->
+    <h2>Ejemplo 1: Datos Cuantitativos Discretos</h2>
+
+    <p class="descripcion">
+        Se encuestó a 100 estudiantes sobre el número de materias reprobadas.
+    </p>
+
+    <h3>Datos</h3>
+    <div class="datos">
+        <ul>
+            <li>0,0,0,0,0,0,0,0,0,0</li>
+            <li>0,0,0,0,0,0,0,0,0,0</li>
+            <li>0,0,0,0,0,0,0,0,0,0</li>
+            <li>0,0,0,0,0,0,0,0,0,0</li>
+
+            <li>1,1,1,1,1,1,1,1,1,1</li>
+            <li>1,1,1,1,1,1,1,1,1,1</li>
+            <li>1,1,1,1,1,1,1,1,1,1</li>
+
+            <li>2,2,2,2,2,2,2,2,2,2</li>
+            <li>2,2,2,2,2,2,2,2,2,2</li>
+
+            <li>3,3,3,3,3,3,3,3,3,3</li>
+        </ul>
+    </div>
+
+    <table>
+        <tr>
+            <th>Clase</th>
+            <th>Frecuencia Absoluta</th>
+            <th>Frecuencia Relativa</th>
+            <th>Frecuencia Acumulada</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>40</td>
+            <td>0.40</td>
+            <td>40.00</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>30</td>
+            <td>0.30</td>
+            <td>70.00</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>20</td>
+            <td>0.20</td>
+            <td>90.00</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>10</td>
+            <td>0.10</td>
+            <td>100.00</td>
+        </tr>
+    </table>
+
+    <div class="descripcion">
+        <strong>Interpretación verbal:</strong><br><br>
+        De los 100 estudiantes encuestados, 40 no han reprobado ninguna materia, lo que representa el 40% del grupo.
+        30 estudiantes han reprobado una materia (30%), mientras que 20 alumnos reprobaron dos materias (20%).
+        Solo 10 estudiantes, equivalentes al 10%, han reprobado tres materias.
+        Esto indica que la mayoría del grupo tiene buen desempeño académico, ya que más de la mitad presenta cero o una
+        materia reprobada.
+    </div>
+    <h3>Imágenes</h3>
+    <div class="galeria">
+        <img src="imagenes/1.jpeg">
+        <img src="imagenes/2.jpeg">
+        <img src="imagenes/3.jpeg">
+        <img src="imagenes/4.jpeg">
+        <img src="imagenes/5.jpeg">
+    </div>
+
+    <!-- ===================== EJEMPLO 2 ===================== -->
+    <h2>Ejemplo 2: Datos Cuantitativos Continuos</h2>
+
+    <p class="descripcion">
+        Tiempo en minutos que tardan 100 estudiantes en llegar a la escuela.
+    </p>
+
+    <h3>Datos</h3>
+    <div class="datos">
+        <ul>
+            <li>10,12,15,18,5,7,9,14,16,19</li>
+            <li>11,8,6,13,17,4,3,20,2,1</li>
+            <li>22,25,30,35,28,26,24,29,23,27</li>
+            <li>31,34,38,33,36,37,39,32,40,21</li>
+            <li>45,50,55,60,48,47,52,53,58,41</li>
+            <li>42,43,44,46,49,51,54,56,57,59</li>
+            <li>65,70,75,80,68,72,74,78,79,62</li>
+            <li>61,63,64,66,67,69,71,73,76,77</li>
+        </ul>
+    </div>
+
+    <table>
+        <tr>
+            <th>Clase</th>
+            <th>Límite Inferior</th>
+            <th>Límite Superior</th>
+            <th>Marca de Clase</th>
+            <th>Frecuencia Absoluta</th>
+            <th>Frecuencia Relativa</th>
+            <th>Frecuencia Acumulada</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+            <td>20</td>
+            <td>10</td>
+            <td>25</td>
+            <td>0.25</td>
+            <td>25.00</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>21</td>
+            <td>40</td>
+            <td>30.5</td>
+            <td>30</td>
+            <td>0.30</td>
+            <td>55.00</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>41</td>
+            <td>60</td>
+            <td>50.5</td>
+            <td>25</td>
+            <td>0.25</td>
+            <td>80.00</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>61</td>
+            <td>80</td>
+            <td>70.5</td>
+            <td>20</td>
+            <td>0.20</td>
+            <td>100.00</td>
+        </tr>
+    </table>
+
+    <div class="descripcion">
+        <strong>Interpretación verbal:</strong><br><br>
+        El intervalo con mayor frecuencia es el de 21 a 40 minutos, con 30 estudiantes (30%).
+        El 25% tarda entre 0 y 20 minutos, y otro 25% entre 41 y 60 minutos.
+        Finalmente, el 20% tarda entre 61 y 80 minutos.
+        Se observa que más de la mitad de los estudiantes (55%) tarda menos de 40 minutos en llegar a la escuela.
+    </div>
+
+    <h3>Imágenes</h3>
+    <div class="galeria">
+        <img src="imagenes/6.jpeg">
+        <img src="imagenes/7.jpeg">
+        <img src="imagenes/8.jpeg">
+        <img src="imagenes/9.jpeg">
+        <img src="imagenes/10.jpeg">
+    </div>
+
+    <!-- ===================== EJEMPLO 3 ===================== -->
+    <h2>Ejemplo 3: Datos Cualitativos</h2>
+
+    <p class="descripcion">
+        Deporte favorito de 100 personas.
+    </p>
+
+    <h3>Datos</h3>
+    <div class="datos">
+        <ul>
+            <li>Fútbol, Fútbol, Fútbol, Fútbol, Fútbol, Fútbol, Fútbol, Fútbol, Fútbol, Fútbol</li>
+            <li>Fútbol, Fútbol, Fútbol, Fútbol, Fútbol, Fútbol, Fútbol, Fútbol, Fútbol, Fútbol</li>
+            <li>Fútbol, Fútbol, Fútbol, Fútbol, Fútbol, Fútbol, Fútbol, Fútbol, Fútbol, Fútbol</li>
+            <li>Fútbol, Fútbol, Fútbol, Fútbol, Fútbol</li>
+
+            <li>Basquetbol, Basquetbol, Basquetbol, Basquetbol, Basquetbol</li>
+            <li>Basquetbol, Basquetbol, Basquetbol, Basquetbol, Basquetbol</li>
+            <li>Basquetbol, Basquetbol, Basquetbol, Basquetbol, Basquetbol</li>
+            <li>Basquetbol, Basquetbol, Basquetbol, Basquetbol, Basquetbol</li>
+            <li>Basquetbol, Basquetbol, Basquetbol, Basquetbol, Basquetbol</li>
+
+            <li>Voleibol, Voleibol, Voleibol, Voleibol, Voleibol</li>
+            <li>Voleibol, Voleibol, Voleibol, Voleibol, Voleibol</li>
+            <li>Voleibol, Voleibol, Voleibol, Voleibol, Voleibol</li>
+            <li>Voleibol, Voleibol, Voleibol, Voleibol, Voleibol</li>
+
+            <li>Natación, Natación, Natación, Natación, Natación</li>
+            <li>Natación, Natación, Natación, Natación, Natación</li>
+            <li>Natación, Natación, Natación, Natación, Natación</li>
+            <li>Natación, Natación, Natación, Natación, Natación</li>
+            <li>Natación, Natación, Natación, Natación, Natación</li>
+        </ul>
+    </div>
+
+    <table>
+        <tr>
+            <th>Clase</th>
+            <th>Frecuencia Absoluta</th>
+            <th>Frecuencia Relativa</th>
+            <th>Frecuencia Acumulada</th>
+        </tr>
+        <tr>
+            <td>Fútbol</td>
+            <td>35</td>
+            <td>0.35</td>
+            <td>35.00</td>
+        </tr>
+        <tr>
+            <td>Basquetbol</td>
+            <td>25</td>
+            <td>0.25</td>
+            <td>60.00</td>
+        </tr>
+        <tr>
+            <td>Voleibol</td>
+            <td>20</td>
+            <td>0.20</td>
+            <td>80.00</td>
+        </tr>
+        <tr>
+            <td>Natación</td>
+            <td>20</td>
+            <td>0.20</td>
+            <td>100.00</td>
+        </tr>
+    </table>
+
+    <div class="descripcion">
+        <strong>Interpretación verbal:</strong><br><br>
+        El deporte más mencionado fue Fútbol, con 35 personas (35%).
+        Le sigue Basquetbol con 25% de preferencia.
+        Voleibol y Natación presentan cada uno el 20% de las respuestas.
+        En conclusión, Fútbol es el deporte con mayor preferencia dentro del grupo encuestado.
+    </div>
+
+    <h3>Imágenes</h3>
+    <div class="galeria">
+        <img src="imagenes/11.jpeg">
+        <img src="imagenes/12.jpeg">
+        <img src="imagenes/13.jpeg">
+        <img src="imagenes/14.jpeg">
+        <img src="imagenes/15.jpeg">
+    </div>
+
+</body>
+
+</html>
